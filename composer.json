@@ -1,0 +1,36 @@
+{
+        "name": "md/cfo-project",
+        "description": "The University of Iowa CFO Project Code and Theme",
+        "type": "silverstripe-module",
+        "require": {
+                "php": ">=5.3.2",
+                "silverstripe/cms": "3.1.5",
+                "silverstripe/framework": "3.1.5",
+                "silverstripe/installer": "*",
+                "silverstripe-themes/simple": "*",
+                "undefinedoffset/sortablegridfield": "*",
+                "unclecheese/betterbuttons": "*",
+                "colymba/gridfield-bulk-editing-tools": "*",
+                "silverstripe/blog": "*",
+                "silverstripe/widgets": "*",
+                "silverstripe/userforms": "*",
+                "silverstripe/recaptcha": "*",
+                "silverstripe/mathspamprotection" : "*",
+                "simplepie/simplepie": "*",
+                "silverstripe/googlesitemaps": "*",
+                "silverstripe/timepickerfield": "*",
+                "md/division-bar": "*"
+        },
+        "extra": {
+                "branch-alias": {
+                        "dev-master": "0.1.x-dev"
+                }
+        },
+        "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/division-bar"       
+        }
+    ]
+
+}
