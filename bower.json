@@ -1,17 +1,8 @@
 {
-  "name": "division-project",
-  "version": "2.0.0",
-  "homepage": "https://github.com/StudentLifeMarketingAndDesign/division-project",
-  "authors": [
-    "Dustin Quam <quamsta@gmail.com>"
-  ],
-  "license": "MIT",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+	"name": "silverstripe-foundation-theme",
+	"version": "1.1.6",
+	"private": "true",
+	"dependencies": {
+		"foundation": "zurb/bower-foundation"
+	}
 }
