@@ -1,53 +1,32 @@
 <!doctype html>
 <html class="no-js" lang="$ContentLocale.ATT" dir="$i18nScriptDirection.ATT">
+
 <head>
 	<% base_tag %>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> | $SiteConfig.Title | The University of Iowa</title>
-	<meta name="description" content="$MetaDescription.ATT" />
-	<%--http://ogp.me/--%>
-	<meta property="og:site_name" content="$SiteConfig.Title.ATT" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="$Title.ATT" />
-	<meta property="og:description" content="$MetaDescription.ATT" />
-	<meta property="og:url" content="$AbsoluteLink.ATT" />
-	<% if $Image %>
-	<meta property="og:image" content="<% with $Image.SetSize(500,500) %>$AbsoluteURL.ATT<% end_with %>" />
-	<% end_if %>
-	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico" />
-	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
+	<title>$Title | $SiteConfig.Title | The University of Iowa</title>
+
+	<% include MetaTags %>
+	<% include Favicon %>
+
 	<link rel="stylesheet" href="$ThemeDir/css/app.css" />
 	<script src="$ThemeDir/bower_components/modernizr/modernizr.js"></script>
-	<script type="text/javascript" src="//use.typekit.net/ivn3muh.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<% include Typekit %>
 </head>
+
 <body class="$ClassName.ATT">
 	<% include DivisionBar %>
-	<header class="header" role="banner">
-		<div class="contain-to-grid">
-			<% include TopBar %>
-		</div>
-	</header>
-
+	<% include Header %>
 	<div class="main typography" role="main">
 		<div class="row">
 			$Layout
 		</div>
 	</div>
-
-	<nav role="navigation">
-		<div class="row">
-			<div class="large-12 columns">
-				<% include Breadcrumbs %>
-			</div>
-		</div>
-	</nav>
-
 	<% include Footer %>
-
-	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
+	<% include Analytics %>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="{$ThemeDir}/build/build.js"></script>
 </body>
+
 </html>
