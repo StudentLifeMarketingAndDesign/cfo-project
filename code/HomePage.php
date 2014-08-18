@@ -35,15 +35,15 @@ class HomePage extends Page {
 	    }
 
 		$homePageBackgroundFeatureGridField = new GridField('BackgroundFeatures', 'Background Features', $this->BackgroundFeatures(), GridFieldConfig_RelationEditor::create());
-	    $homePageHeroFeatureGridField = new GridField("HomePageHeroFeature", "Home Page Hero Features (Only the first two are shown)", HomePageHeroFeature::get(), $gridFieldConfig);
-	  	$homePageFeatureGridField = new GridField("HomePageFeature", "Home Page Features (Only the first three are shown)", HomePageFeature::get(), $gridFieldConfig2);
+	    $homePageQuicklink = new GridField("HomePageQuicklink", "Home Page Quick Links", HomePageQuicklink::get(), $gridFieldConfig);
+	  	$carouselImageGridField = new GridField("CarouselImages", "Home Page Carousel Images", CarouselImage::get(), $gridFieldConfig2);
 
 	  	if(Permission::check('ADMIN')){
 			$f->addFieldToTab("Root.Main", $homePageBackgroundFeatureGridField);
 		}
-		
-		$f->addFieldToTab("Root.Main", $homePageHeroFeatureGridField);
-	    $f->addFieldToTab("Root.Main", $homePageFeatureGridField); 
+
+		$f->addFieldToTab("Root.Main", $homePageQuicklink);
+	    $f->addFieldToTab("Root.Main", $carouselImageGridField);
 
 
 		return $f;
@@ -80,15 +80,15 @@ class HomePage_Controller extends Page_Controller {
 
 		return $page->renderWith(array('HomePage','Page'));
 	}
-	public function HomePageFeatures() {
-		$features = HomePageFeature::get();
+	public function CarouselImages() {
+		$features = CarouselImage::get();
 
 		return $features;
 
 	}
 
-	public function HomePageHeroFeatures() {
-		$features = HomePageHeroFeature::get();
+	public function HomePageQuicklinks() {
+		$features = HomePageQuicklink::get();
 
 		return $features;
 

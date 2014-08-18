@@ -5,21 +5,17 @@
             <% if $Teams %>
             <% loop $Teams %>
                   <h2 class="staff-title">$Title</h2>
-                  <ul class="staff-list">
+                  <ul class="staff-list small-block-grid-2 medium-block-grid-3 large-block-grid-4">
                   <% loop $SortedStaffPages %>
                         <% include StaffPageListItem %>
                   <% end_loop %>
-                        <li class="filler"></li>
-                        <li class="filler"></li>
                   </ul>
             <% end_loop %>
             <% else %>
-                  <ul class="staff-list">
+                  <ul class="staff-list small-block-grid-2 medium-block-grid-3 large-block-grid-4">
                   <% loop $Children %>
                         <% include StaffPageListItem %>
                   <% end_loop %>
-                        <li class="filler"></li>
-                        <li class="filler"></li>
                   </ul>
             <% end_if %>
 
