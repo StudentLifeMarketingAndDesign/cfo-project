@@ -16,7 +16,7 @@ class HomePage extends Page {
 	public function getCMSFields(){
 		$f = parent::getCMSFields();
 
-		$f->removeByName("Content");
+		// $f->removeByName("Content");
 		$f->removeByName("BackgroundImage");
 		$f->removeByName("InheritSidebarItems");
 		$f->removeByName("SidebarLabel");
@@ -92,6 +92,11 @@ class HomePage_Controller extends Page_Controller {
 
 		return $features;
 
+	}
+
+	public function RandomStaffMembers($limit = 3){
+		$staffPages = StaffPage::get()->Sort('RAND()')->Limit($limit);
+		return $staffPages;
 	}
 
 }

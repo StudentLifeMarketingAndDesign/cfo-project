@@ -18,7 +18,7 @@
                               </li>
                         <% end_if %>
                   </ul>
-                  
+
                   $Content
       </article>
 </div>

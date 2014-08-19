@@ -4,6 +4,7 @@
             $Content
             <% if $Teams %>
             <% loop $Teams %>
+                  <hr>
                   <h2 class="staff-title">$Title</h2>
                   <ul class="staff-list small-block-grid-2 medium-block-grid-3 large-block-grid-4">
                   <% loop $SortedStaffPages %>

@@ -1,7 +1,7 @@
 
 <footer class="footer clearfix" role="contentinfo">
 	<div class="row">
-		<div class="medium-4 large-5 columns">
+		<div class="medium-6 large-5 columns">
 			<a href="http://studentlife.uiowa.edu" class="hide-print footer-logo"><img src="{$ThemeDir}/images/dosl-uiowa.png" alt="Division Of Student Life"></a><br>
 			<% if $SiteConfig.GroupSummary %>
 				$SiteConfig.GroupSummary
@@ -17,7 +17,7 @@
 				<% end_if %>
 			</p>
 		</div>
-		<div class="medium-4 large-4 columns">
+		<div class="medium-6 large-4 columns">
 			<div class="row">
 				<div class="small-6 columns">
 					<ul class="border-list">
@@ -38,7 +38,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="medium-4 large-3 columns">
+		<div class="medium-12 large-3 columns">
 			<% include FooterRightContent %>
 		</div>
 	</div>
