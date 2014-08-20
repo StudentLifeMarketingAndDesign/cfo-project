@@ -19,7 +19,8 @@
                 "simplepie/simplepie": "*",
                 "silverstripe/googlesitemaps": "*",
                 "silverstripe/timepickerfield": "*",
-                "md/division-bar": "*"
+                "md/division-bar": "*",
+                "jonom/focuspoint" : "*"
         },
         "extra": {
                 "branch-alias": {
