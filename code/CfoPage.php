@@ -52,5 +52,8 @@ public function updateCMSFields(FieldList $f) {
     public function SidebarItems() {
         return $this->owner->getManyManyComponents('SidebarItems')->sort('SortOrder');
     }
+	public function Calendar() {
+  		return LocalistCalendar::get()->First();
+  	}
 	
 }
