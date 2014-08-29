@@ -20,6 +20,7 @@
                 "silverstripe/googlesitemaps": "*",
                 "silverstripe/timepickerfield": "*",
                 "md/division-bar": "*",
+                "md/ac-json-events": "dev-master",
                 "jonom/focuspoint" : "*"
         },
         "extra": {
@@ -31,6 +32,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/division-bar"       
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events"       
         }
     ]
 
