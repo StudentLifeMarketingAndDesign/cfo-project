@@ -2,7 +2,7 @@
 <footer class="footer clearfix" role="contentinfo">
 	<div class="row">
 		<div class="medium-6 large-5 columns">
-			<a href="http://studentlife.uiowa.edu" class="hide-print footer-logo"><img src="{$ThemeDir}/images/dosl-uiowa.png" alt="Division Of Student Life"></a><br>
+			<a href="http://studentlife.uiowa.edu" class="hide-print footer-logo"><img src="cfo-project/images/dosl-uiowa.png" alt="Division Of Student Life"></a><br>
 			<% if $SiteConfig.GroupSummary %>
 				$SiteConfig.GroupSummary
 			<% else %>

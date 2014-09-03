@@ -1,11 +1,11 @@
 <li>
 	<% if $Photo %>
 		<a href="$Link" class="staff-link">
-			<img src="$Photo.CroppedFocusedImage(230,230).URL" alt="$FirstName $LastName" class="staff-img">
+			<img src="$Photo.CroppedImage(230,230).URL" alt="$FirstName $LastName" class="staff-img">
 		</a>
 	<% else %>
 		<a href="$Link" class="staff-link">
-			<img src="division-project/images/dosl.png" alt="$FirstName $LastName" class="staff-img">
+			<img src="{$ThemeDir}/images/placeholder.gif" alt="$FirstName $LastName" class="staff-img">
 		</a>
 	<% end_if %>
 	<p class="staff-name">

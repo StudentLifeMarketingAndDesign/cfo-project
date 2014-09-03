@@ -1,31 +1,20 @@
-<div class="<% if $Children || $Parent %>large-9 columns<% else %>large-12<% end_if %> columns">
-      <article>
-                  <h1>$Title</h1>
-                  <% if $Photo %>
-                        <img src="$Photo.URL" alt="$FirstName $LastName">
-                  <% end_if %>
-                  <h2>$Position</h2>
-                  <ul>
-                        <% if $EmailAddress %><li>Email: <a href="mailto:$EmailAddress">$EmailAddress</a></li><% end_if %>
-                        <% if $Phone %><li>Phone: $Phone</li><% end_if %>
-                        <% if $DepartmentName %>
-                              <li>
-                                    <% if $DepartmentURL %>
-                                          <a href="$DepartmentURL">$DepartmentName</a>
-                                    <% else %>
-                                          $DepartmentName
-                                    <% end_if %>
-                              </li>
-                        <% end_if %>
-                  </ul>
-
-                  $Content
-      </article>
+<div class="<% if $Children || $Parent %>large-9 columns content-left<% else %>large-12<% end_if %> columns">
+	<article>
+			<h1>$Title</h1>
+			<% if $Photo %>
+					<img src="$Photo.CroppedFocusedImage(706,397).URL" alt="$FirstName $LastName" class="staffpage-img">
+				<% else %>
+					<img src="{$ThemeDir}/images/placeholder.gif" alt="$FirstName $LastName" class="staff-img">
+			<% end_if %>
+			<hr>
+			<h3>$Position</h3>
+			<% if $EmailAddress %><p>Email: <a href="mailto:$EmailAddress">$EmailAddress</a></p><% end_if %>
+			$Content
+	</article>
 </div>
 <% if $Children || $Parent %><%--Determine if Side Nav should be rendered, you can change this logic--%>
-<div class="large-3 columns">
-      <div class="panel">
-            <% include SideNav %>
-      </div>
-</div>
+	<div class="large-3 columns content-right">
+		<br>
+		<% include SideNav %>
+	</div>
 <% end_if %>

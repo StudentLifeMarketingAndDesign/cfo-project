@@ -11,7 +11,7 @@
 	<% include Favicon %>
 
 	<link rel="stylesheet" href="$ThemeDir/css/app.css" />
-	<script src="$ThemeDir/bower_components/modernizr/modernizr.js"></script>
+	<script src="cfo-project/bower_components/modernizr/modernizr.js"></script>
 	<% include Typekit %>
 	<% include Analytics %>
 </head>
@@ -38,7 +38,7 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="{$ThemeDir}/build/build.js"></script>
 
-	<script src="{$ThemeDir}/javascript/responsive-nav.js"></script>
+	<script src="cfo-project/javascript/responsive-nav.js"></script>
 	<script>
 		var navigation = responsiveNav(".nav-collapse", {
 			insert: "before"
