@@ -2,11 +2,11 @@
 class CfoPage extends DataExtension {
 
 	private static $db = array(
-		
+
 	);
 
 	private static $has_one = array(
-		"BackgroundImage" => "Image",
+
 	);
 
 
@@ -30,17 +30,15 @@ class CfoPage extends DataExtension {
 
 
 public function updateCMSFields(FieldList $f) {
-		if(Permission::check('ADMIN')){
-			$f->addFieldToTab("Root.Main", new UploadField("BackgroundImage", "Background Image"));
-		}
-		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
-		
-		$row = "SortOrder";
-		$gridFieldConfig->addComponent($sort = new GridFieldSortableRows(stripslashes($row))); 
 
-		$sort->table = 'Page_SidebarItems'; 
-		$sort->parentField = 'PageID'; 
-		$sort->componentField = 'SidebarItemID'; 
+		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
+
+		$row = "SortOrder";
+		$gridFieldConfig->addComponent($sort = new GridFieldSortableRows(stripslashes($row)));
+
+		$sort->table = 'Page_SidebarItems';
+		$sort->parentField = 'PageID';
+		$sort->componentField = 'SidebarItemID';
 
 		$gridField = new GridField("SidebarItems", "Sidebar Items", $this->SidebarItems(), $gridFieldConfig);
 		$f->addFieldToTab("Root.Sidebar", new LabelField("SidebarLabel", "<h2>Add sidebar items below</h2>"));
@@ -55,5 +53,5 @@ public function updateCMSFields(FieldList $f) {
 	public function Calendar() {
   		return LocalistCalendar::get()->First();
   	}
-	
+
 }

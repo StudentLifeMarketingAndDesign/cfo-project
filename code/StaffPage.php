@@ -10,23 +10,21 @@ class StaffPage extends Page {
 		"DepartmentURL" => "Text",
 		"DepartmentName" => "Text",
 
-	
+
 	);
 
 	private static $has_one = array(
 		"Photo" => "Image",
 	);
-	
+
 	private static $belongs_many_many = array (
 		"Teams" => "StaffTeam"
 	);
-	
+
 	public function getCMSFields(){
 		$fields = parent::getCMSFields();
-		
-		$fields->removeByName("Content");
-		$fields->removeByName("Metadata");
-		$fields->removeByName("BackgroundImage");
+
+		// $fields->removeByName("Content");
 
 		$fields->addFieldToTab("Root.Main", new TextField("FirstName", "First Name"));
 		$fields->addFieldToTab("Root.Main", new TextField("LastName", "Last Name"));
@@ -36,20 +34,26 @@ class StaffPage extends Page {
 		$fields->addFieldToTab("Root.Main", new TextField("DepartmentName", "Department name (optional)"));
 		$fields->addFieldToTab("Root.Main", new TextField("DepartmentURL", "Department URL (optional)"));
 
-		
+
 		$fields->addFieldToTab("Root.Main", new CheckboxSetField("Teams", 'Team <a href="admin/pages/edit/show/14" target="_blank">(Manage Teams)</a>', StaffTeam::get()->map('ID', 'Name')));
-		
+
 		//$fields->addFieldToTab("Root.Main", new LiteralField("TeamLabel", ''));
 
-		$fields->addFieldToTab("Root.Main", new HTMLEditorField("Content", "Biography"));
 		$fields->addFieldToTab("Root.Main", new UploadField("Photo", "Photo (dimensions)"));
-
 		$fields->addFieldToTab("Root.Main", new HTMLEditorField("Content", "Biography"));
-		
+
+		$fields->removeByName("Metadata");
+		$fields->removeByName("BackgroundImage");
+		$fields->removeByName("Metadata");
+		$fields->removeByName("BackgroundImage");
+		$fields->removeByName("DepartmentURL");
+		$fields->removeByName("DepartmentName");
+		$fields->removeByName("Phone");
+
 		return $fields;
-		
+
 	}
-	
+
 	//private static $allowed_children = array("");
 
 }

@@ -10,7 +10,7 @@ class HomePage extends Page {
 	);
 
 	private static $has_many = array(
-		'BackgroundFeatures' => 'HomePageBackgroundFeature',
+
 	);
 
 	public function getCMSFields(){
@@ -34,13 +34,8 @@ class HomePage extends Page {
 	      $gridFieldConfig->removeComponentsByType('GridFieldDeleteAction');
 	    }
 
-		$homePageBackgroundFeatureGridField = new GridField('BackgroundFeatures', 'Background Features', $this->BackgroundFeatures(), GridFieldConfig_RelationEditor::create());
-	    $homePageQuicklink = new GridField("HomePageQuicklink", "Home Page Quick Links", HomePageQuicklink::get(), $gridFieldConfig);
+	   $homePageQuicklink = new GridField("HomePageQuicklink", "Home Page Quick Links", HomePageQuicklink::get(), $gridFieldConfig);
 	  	$carouselImageGridField = new GridField("CarouselImages", "Home Page Carousel Images", CarouselImage::get(), $gridFieldConfig2);
-
-	  	if(Permission::check('ADMIN')){
-			$f->addFieldToTab("Root.Main", $homePageBackgroundFeatureGridField);
-		}
 
 		$f->addFieldToTab("Root.Main", $homePageQuicklink);
 	    $f->addFieldToTab("Root.Main", $carouselImageGridField);
