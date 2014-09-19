@@ -1,7 +1,5 @@
 <?php
 
-
-
 class BlogFieldExtension extends DataExtension {
 
     private static $db = array(
@@ -11,6 +9,7 @@ class BlogFieldExtension extends DataExtension {
     private static $has_one = array(
         'Image' => 'Image',
         'AudioClip' => 'File',
+        'StaffPage' => 'StaffPage'
     );
 
     public function getCMSFields() {
@@ -23,6 +22,12 @@ class BlogFieldExtension extends DataExtension {
     public function updateCMSFields(FieldList $fields) {
 
       $fields->addFieldToTab('Root.Main', new UploadField( 'AudioClip', 'Audio Clip'),'Content');
+
+      $authors = StaffPage::get();
+      $authorDropdown = new DropdownField('StaffPageID', 'Author (if not listed, use the field below)', $authors->Map());
+      $authorDropdown->setEmptyString('No associated staff member');
+
+      $fields->addFieldToTab('Root.Main', $authorDropdown, 'Author');
 
       // remove
       $fields->removeByName("StoryByEmail");
