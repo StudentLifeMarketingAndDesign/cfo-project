@@ -1,14 +1,19 @@
 <div class="<% if $Children || $Parent %>large-9 columns content-left<% else %>large-12<% end_if %> columns">
 	<article>
-			<h1>$Title</h1>
 			<% if $Photo %>
 					<img src="$Photo.CroppedFocusedImage(706,397).URL" alt="$FirstName $LastName" class="staffpage-img">
 				<% else %>
 					<img src="{$ThemeDir}/images/placeholder.gif" alt="$FirstName $LastName" class="staff-img">
 			<% end_if %>
 			<hr>
-			<h3>$Position</h3>
-			<% if $EmailAddress %><p>Email: <a href="mailto:$EmailAddress">$EmailAddress</a></p><% end_if %>
+			<h1>$Title</h1>
+			<% if $Position %><h3>$Position</h3><% end_if %>
+			<% if $Phone || $EmailAddress %>
+				<p>
+					<% if $EmailAddress %>Email: <a href="mailto:$EmailAddress">$EmailAddress</a><% end_if %>
+					<% if $Phone %><br>Phone: $Phone<% end_if %>
+				</p>
+			<% end_if %>
 			$Content
 	</article>
 </div>

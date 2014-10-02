@@ -29,7 +29,7 @@
 			// $fields->push( new HTMLEditorField( 'Content', 'Content' ));
 
 			$fields->push( new UploadField("Image", "Image"));
-			$fields->push( new TextField( "YouTubeEmbed", "Use a YouTube embed code instead of an image:"));
+			$fields->push( new TextareaField( "YouTubeEmbed", "Use a video iframe embed code instead of an image:"));
 
 			return $fields;
 		}
