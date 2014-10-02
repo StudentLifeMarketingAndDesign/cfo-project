@@ -21,7 +21,8 @@
                 "silverstripe/timepickerfield": "*",
                 "md/division-bar": "*",
                 "md/ac-json-events": "dev-master",
-                "jonom/focuspoint" : "*"
+                "jonom/focuspoint" : "*",
+                "onom/silverstripe-betternavigator" : "*"
         },
         "extra": {
                 "branch-alias": {
