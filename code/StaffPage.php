@@ -44,11 +44,8 @@ class StaffPage extends Page {
 
 		$fields->removeByName("Metadata");
 		$fields->removeByName("BackgroundImage");
-		$fields->removeByName("Metadata");
-		$fields->removeByName("BackgroundImage");
 		$fields->removeByName("DepartmentURL");
 		$fields->removeByName("DepartmentName");
-		$fields->removeByName("Phone");
 
 		return $fields;
 
