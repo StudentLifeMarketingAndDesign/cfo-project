@@ -22,7 +22,7 @@
                 "md/division-bar": "*",
                 "md/ac-json-events": "dev-master",
                 "jonom/focuspoint" : "*",
-                "onom/silverstripe-betternavigator" : "*"
+                "onom/silverstripe-betternavigator" : "dev-master"
         },
         "extra": {
                 "branch-alias": {
