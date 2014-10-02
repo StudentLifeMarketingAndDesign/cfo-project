@@ -17,7 +17,6 @@
 </head>
 
 <body class="$ClassName.ATT">
-$BetterNavigator
 	<% include DivisionBar %>
 
 	<% if $ClassName == "HomePage" %>
