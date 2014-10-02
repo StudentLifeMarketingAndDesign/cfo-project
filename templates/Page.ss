@@ -17,7 +17,6 @@
 </head>
 
 <body class="$ClassName.ATT">
-
 	<% include DivisionBar %>
 
 	<% if $ClassName == "HomePage" %>
