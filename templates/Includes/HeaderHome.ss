@@ -61,7 +61,11 @@
 							</a>
 						<% end_if %>
 						<div class="orbit-caption">
-							$Title
+							<% if $AssociatedPage %>
+								<a href="$AssociatedPage.Link">$Title</a>
+							<% else %>
+								$Title
+							<% end_if %>
 						</div>
 					</li>
 				<% end_loop %>
