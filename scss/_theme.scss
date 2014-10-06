@@ -498,6 +498,19 @@ h1, h2 {
 		margin-top: 1.5em;
 	}
 }
+@font-face {
+    font-family: 'iconies_socialregular';
+    src: url('../font/iconiessocial-webfont.eot');
+    src: url('../font/iconiessocial-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/iconiessocial-webfont.woff') format('woff'),
+         url('../font/iconiessocial-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.footer .social-icon {
+	font-family: 'iconies_socialregular';
+}
 
 // /*! responsive-nav.js 1.0.32 by @viljamis */ =========================================================
 
