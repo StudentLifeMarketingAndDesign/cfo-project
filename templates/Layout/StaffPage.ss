@@ -1,9 +1,9 @@
 <div class="<% if $Children || $Parent %>large-9 columns content-left<% else %>large-12<% end_if %> columns">
 	<article>
 			<% if $Photo %>
-					<img src="$Photo.CroppedFocusedImage(706,397).URL" alt="$FirstName $LastName" class="staffpage-img">
+					<img src="$Photo.CroppedFocusedImage(706,397).URL" alt="Photograph of $FirstName $LastName" class="staffpage-img">
 				<% else %>
-					<img src="{$ThemeDir}/images/placeholder.gif" alt="$FirstName $LastName" class="staff-img">
+					<img src="{$ThemeDir}/images/placeholder.gif" alt="Placeholder photograph of $FirstName $LastName" class="staff-img">
 			<% end_if %>
 			<hr>
 			<h1>$Title</h1>

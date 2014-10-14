@@ -8,14 +8,16 @@ class SiteConfigExtension extends DataExtension {
 	'PhoneNumber' =>'Text',
 	'FacebookLink' =>'Text',
 	'GroupSummary'=>'HTMLText',
-	'EmailAddress' => 'Text'
-    
+	'EmailAddress' => 'Text',
+	'VimeoLink' => 'Text',
+	'YouTubeLink' => 'Text',
+
 	);
 
   static $has_one = array(
-    
+
   );
-  
+
   public function updateCMSFields(FieldList $fields){
 
 	  $fields->addFieldToTab('Root.Main', new HTMLEditorField('GroupSummary', 'Group Summary'));
@@ -26,17 +28,19 @@ class SiteConfigExtension extends DataExtension {
 
 	  $fields->addFieldToTab('Root.Main', new TextField('TwitterLink', 'Twitter Account URL'));
 	  $fields->addFieldToTab('Root.Main', new TextField('FacebookLink', 'Facebook Account URL'));
+	  $fields->addFieldToTab('Root.Main', new TextField('VimeoLink', 'Vimeo Account URL'));
+	  $fields->addFieldToTab('Root.Main', new TextField('YouTubeLink', 'YouTube Account URL'));
 
-	  
+
 	  return $fields;
   }
 
 }
 class SiteConfigExtensionPage_Controller extends Page_Controller {
-	
 
-   public function init() { 
-      parent::init(); 
-   }    
-    
+
+   public function init() {
+      parent::init();
+   }
+
 }
