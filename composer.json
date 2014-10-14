@@ -22,7 +22,8 @@
                 "md/division-bar": "*",
                 "md/ac-json-events": "dev-master",
                 "jonom/focuspoint" : "*",
-                "jonom/silverstripe-betternavigator" : "dev-master"
+                "jonom/silverstripe-betternavigator" : "dev-master",
+		"rywa/silverstripe-foundation-forms" : "dev-master"
         },
         "extra": {
                 "branch-alias": {
