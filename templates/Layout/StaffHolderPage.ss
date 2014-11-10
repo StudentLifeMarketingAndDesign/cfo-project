@@ -4,13 +4,15 @@
 		$Content
 		<% if $Teams %>
 		<% loop $Teams %>
-			<hr>
-			<h2 class="staff-title">$Title</h2>
-			<ul class="staff-list small-block-grid-2 medium-block-grid-3 large-block-grid-4">
-			<% loop $SortedStaffPages %>
-				<% include StaffPageListItem %>
-			<% end_loop %>
-			</ul>
+			<% if $SortedStaffPages %>
+				<hr>
+				<h2 class="staff-title">$Title</h2>
+				<ul class="staff-list small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+				<% loop $SortedStaffPages %>
+					<% include StaffPageListItem %>
+				<% end_loop %>
+				</ul>
+			<% end_if %>
 		<% end_loop %>
 		<% else %>
 			<ul class="staff-list small-block-grid-2 medium-block-grid-3 large-block-grid-4">
