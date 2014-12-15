@@ -51,6 +51,14 @@ class StaffPage extends Page {
 
 	}
 
+	public function onBeforeWrite(){
+   
+
+    $this->owner->Title = $this->owner->FirstName.' '.$this->owner->LastName;
+
+    parent::onBeforeWrite();
+  }
+
 	//private static $allowed_children = array("");
 
 }
