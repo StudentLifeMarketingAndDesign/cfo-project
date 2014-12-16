@@ -17,7 +17,7 @@
 </head>
 
 <body class="$ClassName.ATT">
-	<% include DivisionBar %>
+	<% include DivisionBarFoundation %>
 
 	<% if $ClassName == "HomePage" %>
 		<% include HeaderHome %>
