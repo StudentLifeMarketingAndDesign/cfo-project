@@ -1,6 +1,6 @@
 /* import foundation components
 -------------------------------------------*/
-@import "settings";
+//@import "settings";
 @import "foundation/components/grid";
 /*@import "foundation/components/accordion";*/
 /*@import "foundation/components/alert-boxes";*/
@@ -52,6 +52,7 @@
 -------------------------------------------*/
 /* CFO Basic Styles */
 @import "_theme";
+@import "_slick";
 
 .something {
 	height: 100px;

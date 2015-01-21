@@ -5,19 +5,6 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    sass: {
-      dist: {
-        files: {
-          'css/app.css' : 'scss/app.scss',
-        },                  // Target
-        options: {              // Target options
-          style: 'compressed',
-          loadPath: [
-          'bower_components/foundation/scss'
-          ]
-        }
-      }
-    },
     //concat all the files into the build folder
 
     concat: {
@@ -55,17 +42,6 @@ module.exports = function(grunt) {
           spawn: true,
           //livereload: true
         }
-      },
-      css: {
-        files: ['scss/*.scss',
-                'scss/**/*.scss',
-                'scss/**/**/*.scss'
-                ],
-        tasks: ['sass'],
-        options: {
-          spawn: true,
-          //livereload: true
-        }
       }
     },
 
@@ -80,6 +56,6 @@ module.exports = function(grunt) {
 
   // Default task(s).
   // Note: order of tasks is very important
-  grunt.registerTask('default', ['sass', 'concat', 'watch']);
+  grunt.registerTask('default', ['concat', 'watch']);
 
 };
