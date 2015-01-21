@@ -33,16 +33,10 @@
 		<% include PageFooter %>
 
 	</div>
+	<% include Sponsors %>
 	<% include Footer %>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="{$ThemeDir}/build/build.js"></script>
-
-	<script src="cfo-project/javascript/responsive-nav.js"></script>
-	<script>
-		var navigation = responsiveNav(".nav-collapse", {
-			insert: "before"
-		});
-	</script>
+	<script src="{$ThemeDir}/build/build.src.js"></script>
 
 </body>
 </html>

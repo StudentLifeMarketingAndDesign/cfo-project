@@ -77,5 +77,9 @@ class CfoPage_Controller extends Extension {
 		}
 
 	}
+	
+	public function Sponsors() {
+		return Sponsor::get();
+	}
 
 }
