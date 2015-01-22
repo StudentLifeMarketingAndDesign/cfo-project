@@ -12,8 +12,10 @@ module.exports = function(grunt) {
         src: [
           // TODO, include only req. foundation js files
           'bower_components/foundation/js/foundation.js',
-          'bower_components/FlexSlider/jquery.flexslider.js',
+          //'bower_components/FlexSlider/jquery.flexslider.js',
           'bower_components/responsive-nav/responsive-nav.js',
+          'bower_components/slick-carousel/slick/slick.js',
+          'bower_components/jquery-unveil/jquery.unveil.js',
           '../division-bar/js/division-bar.js',
           'javascript/*.js',
           'javascript/**/*.js'

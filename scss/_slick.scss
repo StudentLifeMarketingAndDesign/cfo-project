@@ -99,7 +99,8 @@ $slick-dot-character: '\2022' !default;
 }
 .slick-slide {
     float: left;
-    height: 100%;
+    //height: 100%;
+    height: auto;
     min-height: 1px;
     img {
         display: block;

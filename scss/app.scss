@@ -52,9 +52,32 @@
 -------------------------------------------*/
 /* CFO Basic Styles */
 @import "_theme";
+
+/* ---------------------------------------------------------------
+Sponsors
+--------------------------------------------------------------- */
+
 @import "_slick";
 
-.something {
-	height: 100px;
-	
+.sponsors {
+	background: #fff;
+	padding: 1px 50px;
+	margin-top: 3px;
 }
+.slick-sponsors {
+
+}
+.slick-sponsors .slick-slide img {
+	margin: 0 auto;
+}
+.sponsors .title {
+	font-size: 20px;
+	margin: 1em 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.full-image .content-image img {
+	display: block;
+}
+

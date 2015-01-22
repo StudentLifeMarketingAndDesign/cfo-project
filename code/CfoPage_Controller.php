@@ -80,8 +80,10 @@ class CfoPage_Controller extends Extension {
 	
 	public function Sponsors() {
 		$sponsors = Sponsor::get();
+		$sponsorsList = new ArrayList($sponsors->toArray());
 		
-		print_r($sponsors);
+		//print_r($sponsorsList);
+		return $sponsorsList;
 	}
 
 }
