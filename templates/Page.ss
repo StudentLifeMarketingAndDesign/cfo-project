@@ -36,7 +36,7 @@
 	<% include Sponsors %>
 	<% include Footer %>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="{$ThemeDir}/build/build.src.js"></script>
+	<script src="{$ThemeDir}/build/build.js"></script>
 
 </body>
 </html>
