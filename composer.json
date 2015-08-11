@@ -11,7 +11,7 @@
                 "undefinedoffset/sortablegridfield": "*",
                 "unclecheese/betterbuttons": "*",
                 "colymba/gridfield-bulk-editing-tools": "*",
-                "silverstripe/blog": "1.0",
+                "silverstripe/blog": "dev-master",
                 "silverstripe/widgets": "*",
                 "silverstripe/userforms": "*",
                 "silverstripe/recaptcha": "*",
