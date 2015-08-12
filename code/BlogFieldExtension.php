@@ -8,8 +8,7 @@ class BlogFieldExtension extends DataExtension {
 
     private static $has_one = array(
         'Image' => 'Image',
-        'AudioClip' => 'File',
-        'StaffPage' => 'StaffPage'
+        'AudioClip' => 'File'
     );
 
     public function getCMSFields() {

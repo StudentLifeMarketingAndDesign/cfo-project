@@ -34,5 +34,6 @@ GD::set_default_quality(80);
 ShortcodeParser::get()->register('blogfeed',array('DivisionPage_Controller','BlogFeedHandler'));
 ShortcodeParser::get()->register('spotlight',array('DivisionPage_Controller','StaffSpotlightHandler'));
 Object::add_extension("BlogEntry","BlogFieldExtension");
+Object::add_extension("BlogPost","BlogFieldExtension");
 Object::add_extension("Page","WidgetExtension");
 SiteConfig::add_extension('SiteConfigExtension');
