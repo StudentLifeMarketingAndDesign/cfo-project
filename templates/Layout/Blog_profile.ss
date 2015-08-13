@@ -1,5 +1,5 @@
 
-<div class="<% if $Children || $Parent %>large-9 columns content-left<% else %>large-12<% end_if %> columns">
+<div class="large-9 columns content-left columns">
     <article class="article">
         <% include MemberDetails %>
 
