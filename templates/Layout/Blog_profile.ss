@@ -18,9 +18,8 @@
     <% end_with %>
     </article>
 </div>
-<% if $Children || $Parent %><%--Determine if Side Nav should be rendered, you can change this logic--%>
+
 <div class="large-3 columns content-right">
-    <br>
-    <% include SideNav %>
+    <% include BlogSideBar %>
 </div>
-<% end_if %>
+
