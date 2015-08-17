@@ -23,7 +23,7 @@
         </h1>
         
         <div class="content">$Content</div>
-        
+        <hr />
         <% if $PaginatedList.Exists %>
             <% loop $PaginatedList %>
                 <% include PostSummary %>
