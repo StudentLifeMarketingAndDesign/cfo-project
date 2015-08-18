@@ -11,6 +11,7 @@ class SiteConfigExtension extends DataExtension {
 	'EmailAddress' => 'Text',
 	'VimeoLink' => 'Text',
 	'YouTubeLink' => 'Text',
+	'InstagramLink' => 'Text',
 
 	);
 
@@ -30,6 +31,8 @@ class SiteConfigExtension extends DataExtension {
 	  $fields->addFieldToTab('Root.Main', new TextField('FacebookLink', 'Facebook Account URL'));
 	  $fields->addFieldToTab('Root.Main', new TextField('VimeoLink', 'Vimeo Account URL'));
 	  $fields->addFieldToTab('Root.Main', new TextField('YouTubeLink', 'YouTube Account URL'));
+	  $fields->addFieldToTab('Root.Main', new TextField('InstagramLink', 'Instagram Account URL'));
+
 
 
 	  return $fields;

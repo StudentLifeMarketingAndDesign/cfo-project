@@ -40,6 +40,9 @@
 						<% if $SiteConfig.YouTubeLink %>
 							<li><a href="$SiteConfig.YouTubeLink" target="_blank"><span class="social-icon">y</span> Youtube</a></li>
 						<% end_if %>
+						<% if $SiteConfig.InstagramLink %> 
+							<li><a href="$SiteConfig.InstagramLink" target="_blank"><span class="social-icon">i</span> Instagram</a></li>
+						<% end_if %>
 					</ul>
 				</div>
 			</div>
