@@ -7,7 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<% include TitleAttribute %>
 	<% include OpenGraph %>
-	<% include MetaTags %>
 	<% include Favicon %>
 
 	<link rel="stylesheet" href="$ThemeDir/css/app.css" />
