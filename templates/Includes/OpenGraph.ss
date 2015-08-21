@@ -8,7 +8,7 @@
   <% end_if %>
 
 <% else %>
-	<meta property="og:title" content="$Title" />
+	<meta property="og:title" content="$Title - $SiteConfig.Title" />
 
 	<% if $Image %>
 		<meta property="og:image" content="$Image.SetWidth(600).AbsoluteURL" />
