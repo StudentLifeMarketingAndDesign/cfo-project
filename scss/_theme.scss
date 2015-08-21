@@ -94,7 +94,7 @@ h1, h2 {
 	padding: 0;
 	@media #{$large-up} {
 		background-color: transparent;
-		margin: 3em 0 .5em;
+		margin: 2em 0 .5em;
 		float: right;
 		width: 75%;
 	}
@@ -416,7 +416,7 @@ h1, h2 {
 // Staff List ===================================================
 
 .board-list {
-	background-color: #fff;
+	background-color: rgba(233, 242, 255, 0.62);
 	padding: 3em 0 2em;
 	& ul img {
 		border-radius: 50%;
@@ -606,6 +606,7 @@ h1, h2 {
   height: 55px;
   top: 0;
   right: 0;
+  margin-top: 40px;
 }
 
 .nav-toggle:before {
