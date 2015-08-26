@@ -1,25 +1,30 @@
+<div class="large-9 columns content-left">
+    <div id="BlogContent" class="blogcontent">
+        <article>
 
-<div class="large-9 columns content-left columns">
-    <article class="article">
-        <% include MemberDetails %>
+            <% include MemberDetails %>
 
-    <% if $PaginatedList.Exists %>
-        <h2>Posts by $CurrentProfile.FirstName $CurrentProfile.Surname for $Title:</h2>
-        <% loop $PaginatedList %>
-            <% include PostSummary %>
-        <% end_loop %>
-    <% end_if %>
-    
-    $Form
-    $CommentsForm
+            <% if $PaginatedList.Exists %>
+                <p>Posts by $CurrentProfile.FirstName $CurrentProfile.Surname for $Title:</p>
+                <% loop $PaginatedList %>
+                    <% include PostSummary %>
+                <% end_loop %>
+            <% end_if %>
 
-    <% with $PaginatedList %>
+            $Form
+            $CommentsForm
+
+        </article>
+
+        <% with $PaginatedList %>
         <% include Pagination %>
-    <% end_with %>
-    </article>
+        <% end_with %>
+
+
+    </div>
 </div>
 
 <div class="large-3 columns content-right">
+    <br>
     <% include BlogSideBar %>
 </div>
-
