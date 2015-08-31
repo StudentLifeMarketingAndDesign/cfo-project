@@ -16,7 +16,7 @@
 		<% end_loop %>
 		<% else %>
 			<ul class="staff-list small-block-grid-2 medium-block-grid-3 large-block-grid-4">
-			<% loop $Children %>
+			<% loop $SortedChildren %>
 				<% include StaffPageListItem %>
 			<% end_loop %>
 			</ul>
