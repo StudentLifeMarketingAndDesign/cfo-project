@@ -287,6 +287,13 @@ h1, h2 {
 		width: 100%;
 	}
 }
+
+.slider.single .orbit-container{
+	.orbit-next, .orbit-prev, .orbit-slide-number{
+		display: none;
+	}
+} 
+
 .orbit-container .orbit-slides-container>* .orbit-caption {
 	background-color: transparent;
 	font-size: rem-calc(20);
