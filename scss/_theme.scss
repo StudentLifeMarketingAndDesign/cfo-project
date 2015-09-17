@@ -94,7 +94,7 @@ h1, h2 {
 	padding: 0;
 	@media #{$large-up} {
 		background-color: transparent;
-		margin: 3em 0 .5em;
+		margin: 2em 0 .5em;
 		float: right;
 		width: 75%;
 	}
@@ -287,6 +287,13 @@ h1, h2 {
 		width: 100%;
 	}
 }
+
+.slider.single .orbit-container{
+	.orbit-next, .orbit-prev, .orbit-slide-number{
+		display: none;
+	}
+} 
+
 .orbit-container .orbit-slides-container>* .orbit-caption {
 	background-color: transparent;
 	font-size: rem-calc(20);
@@ -606,6 +613,7 @@ h1, h2 {
   height: 55px;
   top: 0;
   right: 0;
+
 }
 
 .nav-toggle:before {

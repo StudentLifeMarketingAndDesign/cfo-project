@@ -32,6 +32,7 @@
 		<div class="large-8 columns">
 			<% include Nav %>
 
+			<div class="slider <% if $CarouselImages.Count < 2 %>single<% end_if %>">
 			<ul class="home-orbit" data-orbit data-options="
 				animation:slide;
 				animation_speed:1000;
@@ -59,6 +60,7 @@
 					</li>
 				<% end_loop %>
 			</ul>
+			</div>
 		</div>
 	</div>
 </header>
