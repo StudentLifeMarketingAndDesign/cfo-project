@@ -20,64 +20,7 @@ class CfoPage_Controller extends Extension {
 	);
 
 
-	public static function StaffSpotlightHandler( $arguments, $content ) {
-		//example: [spotlight]Faces behind the scenes focuses on a person in the Division every month.[/spotlight]
 
-		$blogHolder = DataObject::get_by_id( 'BlogHolder', 133 );
-
-		$latestStaffSpotlight = $blogHolder->Entries( 1, 'faces' )->sort( 'Date DESC' )->first();
-
-		if ( $latestStaffSpotlight ) {
-
-			$customise = array();
-			/*** SET DEFAULTS ***/
-			$customise['BlogPage'] = $latestStaffSpotlight;
-			$customise['SidebarContent'] = $content;
-
-			//overide the defaults with the arguments supplied
-			$customise = array_merge( $customise, $arguments );
-
-			//get our YouTube template
-			$template = new SSViewer( 'SidebarSpotlight' );
-
-			//return the customised template
-			return $template->process( new ArrayData( $customise ) );
-		}
-
-
-
-	}
-	public static function BlogFeedHandler( $arguments ) {
-		//example: [blogfeed page="news" tags="assessment"]Assessment News[/blogfeed]
-
-		if ( empty( $arguments['page'] ) ) {
-			return;
-		}
-
-		$pageURLSegment = $arguments['page'];
-		$page = DataObject::get( "Page" )->filter( "URLSegment", $pageURLSegment )->first();
-		//print_r($page);
-		if ( $page ) {
-
-			$customise = array();
-			/*** SET DEFAULTS ***/
-			$customise['BlogPage'] = $page;
-			if ( isset( $arguments['tag'] ) ) {
-				$customise['Tag'] = $arguments['tag'];
-			}
-
-			//overide the defaults with the arguments supplied
-			$customise = array_merge( $customise, $arguments );
-
-			//get our YouTube template
-			$template = new SSViewer( 'SidebarBlogFeed' );
-
-			//return the customised template
-			return $template->process( new ArrayData( $customise ) );
-		}
-
-	}
-	
 	public function Sponsors() {
 		$sponsors = Sponsor::get();
 		$sponsorsList = new ArrayList($sponsors->toArray());

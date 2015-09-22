@@ -32,20 +32,22 @@
 		<div class="large-8 columns">
 			<% include Nav %>
 
+			<div class="slider <% if $CarouselImages.Count < 2 %>single<% end_if %>">
 			<ul class="home-orbit" data-orbit data-options="
 				animation:slide;
 				animation_speed:1000;
 				pause_on_hover:true;
+				resume_on_mouseout: true;
 				navigation_arrows:true;
 				bullets:false;
-				timer:false;">
+				timer_speed: 5000;">
 				<% loop CarouselImages.Limit(3) %>
 					<li>
 						<% if $YouTubeEmbed %>
 							$YouTubeEmbed
 						<% else %>
 							<a href="$AssociatedPage.Link">
-								<img src="$Image.CroppedImage(644,390).URL" alt="$Title">
+								<img src="$Image.Fill(644,390).URL" alt="$Title">
 							</a>
 						<% end_if %>
 						<div class="orbit-caption">
@@ -58,6 +60,7 @@
 					</li>
 				<% end_loop %>
 			</ul>
+			</div>
 		</div>
 	</div>
 </header>
