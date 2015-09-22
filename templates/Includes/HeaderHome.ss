@@ -47,7 +47,7 @@
 							$YouTubeEmbed
 						<% else %>
 							<a href="$AssociatedPage.Link">
-								<img src="$Image.CroppedImage(644,390).URL" alt="$Title">
+								<img src="$Image.Fill(644,390).URL" alt="$Title">
 							</a>
 						<% end_if %>
 						<div class="orbit-caption">
