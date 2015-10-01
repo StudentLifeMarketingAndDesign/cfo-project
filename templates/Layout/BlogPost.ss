@@ -10,7 +10,7 @@
 		--%>
 		<div class="content">$Content</div>
 		<% if $AudioClip %>
-			<audio src="$AudioClip.Filename" controls="controls"></audio>
+			<audio src="$AudioClip.Filename" controls="controls" preload="none"></audio>
 		<% end_if %>
 	</article>
 </div>

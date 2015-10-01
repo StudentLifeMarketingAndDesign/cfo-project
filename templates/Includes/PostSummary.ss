@@ -18,7 +18,7 @@
 			</a>
 		</p>
 		<% if $AudioClip %>
-			<audio src="$AudioClip.Filename" controls="controls"></audio>
+			<audio src="$AudioClip.Filename" controls="controls" preload="none"></audio>
 		<% end_if %>
 	<% include EntryMeta %>
 </div>
