@@ -34,4 +34,4 @@
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="$AbsoluteLink" />
 	<meta property="og:site_name" content="$SiteConfig.Title.ATT" />
-	<meta property="fb:admins" content="64131067165" />
+	<meta property="fb:app_id" content="127918570561161" />
