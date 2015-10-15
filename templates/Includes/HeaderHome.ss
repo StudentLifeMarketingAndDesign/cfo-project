@@ -37,9 +37,10 @@
 				animation:slide;
 				animation_speed:1000;
 				pause_on_hover:true;
+				resume_on_mouseout: true;
 				navigation_arrows:true;
 				bullets:false;
-				timer:false;">
+				timer_speed: 5000;">
 				<% loop CarouselImages.Limit(3) %>
 					<li>
 						<% if $YouTubeEmbed %>
