@@ -2,19 +2,24 @@
 -------------------------------------------*/
 //@import "settings";
 @import "foundation/components/grid";
+
 /*@import "foundation/components/accordion";*/
 /*@import "foundation/components/alert-boxes";*/
 @import "foundation/components/block-grid";
 @import "foundation/components/breadcrumbs";
-// @import "foundation/components/button-groups";
-/*@import "foundation/components/buttons";*/
+
+@import "foundation/components/button-groups";
+@import "foundation/components/buttons";
+
 /*@import "foundation/components/clearing";*/
 /*@import "foundation/components/dropdown";*/
 /*@import "foundation/components/dropdown-buttons";*/
 @import "foundation/components/flex-video";
-/*@import "foundation/components/forms";*/
+
+@import "foundation/components/forms";
 @import "foundation/components/icon-bar";
 @import "foundation/components/inline-lists";
+
 /*@import "foundation/components/joyride";*/
 /*@import "foundation/components/keystrokes";*/
 /*@import "foundation/components/labels";*/
@@ -22,23 +27,26 @@
 @import "foundation/components/orbit";
 @import "foundation/components/pagination";
 @import "foundation/components/panels";
+
 /*@import "foundation/components/pricing-tables";*/
 /*@import "foundation/components/progress-bars";*/
 /*@import "foundation/components/range-slider";*/
 /*@import "foundation/components/reveal";*/
 @import "foundation/components/side-nav";
+
 // @import "foundation/components/split-buttons";
 @import "foundation/components/sub-nav";
+
 /*@import "foundation/components/switches";*/
 /*@import "foundation/components/tables";*/
 /*@import "foundation/components/tabs";*/
 @import "foundation/components/thumbs";
+
 /*@import "foundation/components/tooltips";*/
 @import "foundation/components/top-bar";
 @import "foundation/components/type";
 @import "foundation/components/offcanvas";
 @import "foundation/components/visibility";
-
 
 /* additional division bar styles for foundation:
 -------------------------------------------*/
@@ -46,6 +54,7 @@
 
 /* footer styles from cfo-project
 -------------------------------------------*/
+@import "layout/forms.scss";
 @import "layout/footer/footer";
 
 /* Theme Styles
@@ -62,14 +71,16 @@ Sponsors
 .sponsors {
 	background: #fff;
 	padding: 1px 50px;
+
 	//margin-top: 1px;
 }
-.slick-sponsors {
 
-}
+.slick-sponsors {}
+
 .slick-sponsors .slick-slide img {
 	margin: 0 auto;
 }
+
 .sponsors .title {
 	font-size: 20px;
 	margin: 1em 0;
@@ -80,4 +91,3 @@ Sponsors
 .full-image .content-image img {
 	display: block;
 }
-
