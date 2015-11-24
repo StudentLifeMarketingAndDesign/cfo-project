@@ -1,6 +1,6 @@
 <ul class="main-nav show-for-large-up">
 				<% loop Menu(1) %>
-				<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %><% if $Children %> has-dropdown<% end_if %>">
+				<li class="$URLSegment <% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %><% if $Children %> has-dropdown<% end_if %>">
 					<a href="$Link" title="Go to $Title.ATT">$MenuTitle</a>
 					<%--<% if $Children %>
 					<ul class="dropdown">
