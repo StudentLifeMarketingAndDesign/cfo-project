@@ -19,6 +19,7 @@
                 "simplepie/simplepie": "*",
                 "silverstripe/googlesitemaps": "*",
                 "silverstripe/timepickerfield": "*",
+                "undefinedoffset/silverstripe-nocaptcha": "*",
                 "md/division-bar": "*",
                 "md/ac-json-events": "dev-master",
                 "jonom/focuspoint" : "*",
