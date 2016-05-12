@@ -9,6 +9,7 @@
 		<% end_if %>
 		--%>
 		<div class="content">$Content</div>
+		<h2>Audio:</h2>
 		<% if $AudioClip %>
 			<audio src="$AudioClip.Filename" controls="controls" preload="none"></audio>
 		<% end_if %>
