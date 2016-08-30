@@ -10,6 +10,7 @@
                 "silverstripe-themes/simple": "*",
                 "undefinedoffset/sortablegridfield": "*",
                 "unclecheese/betterbuttons": "*",
+		"jonom/silverstripe-betternavigator": "2.1.0",
                 "colymba/gridfield-bulk-editing-tools": "*",
                 "silverstripe/blog": "2.*",
                 "silverstripe/widgets": "*",
