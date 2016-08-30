@@ -14,7 +14,7 @@
 
 		$Content.FirstParagraph(html)
 		<p>	<a href="$Link">
-				<%t Blog.ReadMoreAbout "Continue reading '{title}'..." title=$Title %>
+				Continue reading....
 			</a>
 		</p>
 		<% if $AudioClip %>
