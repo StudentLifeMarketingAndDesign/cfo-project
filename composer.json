@@ -24,7 +24,7 @@
                 "md/division-bar": "*",
                 "md/ac-json-events": "dev-master",
                 "jonom/focuspoint" : "*",
-                "rywa/silverstripe-foundation-forms" : "1.0.x-dev",
+                "rywa/silverstripe-foundation-forms" : "*",
       		    "silverstripe/secureassets" : "*"
         },
         "extra": {
