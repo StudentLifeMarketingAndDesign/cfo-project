@@ -14,7 +14,7 @@
                 "colymba/gridfield-bulk-editing-tools": "*",
                 "silverstripe/blog": "2.*",
                 "silverstripe/widgets": "*",
-                "silverstripe/userforms": "4.1.0",
+                "silverstripe/userforms": "2.*",
                 "silverstripe/recaptcha": "*",
                 "silverstripe/mathspamprotection" : "*",
                 "simplepie/simplepie": "*",
@@ -24,7 +24,7 @@
                 "md/division-bar": "*",
                 "md/ac-json-events": "dev-master",
                 "jonom/focuspoint" : "*",
-                "rywa/silverstripe-foundation-forms" : "1.1.*@dev",
+                "rywa/silverstripe-foundation-forms" : "1.0.x-dev",
       		    "silverstripe/secureassets" : "*"
         },
         "extra": {
