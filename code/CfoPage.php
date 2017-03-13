@@ -2,11 +2,12 @@
 class CfoPage extends DataExtension {
 
 	private static $db = array(
-
+		'OgTitle' => 'Text',
+		'OgDescription' => 'Text',
 	);
 
 	private static $has_one = array(
-
+		'OgImage' => 'Image'
 	);
 
 
@@ -43,6 +44,11 @@ public function updateCMSFields(FieldList $f) {
 		$gridField = new GridField("SidebarItems", "Sidebar Items", $this->SidebarItems(), $gridFieldConfig);
 		$f->addFieldToTab("Root.Sidebar", new LabelField("SidebarLabel", "<h2>Add sidebar items below</h2>"));
 		$f->addFieldToTab("Root.Sidebar", new LiteralField("SidebarManageLabel", '<p><a href="admin/sidebar-items" target="_blank">View and Manage Sidebar Items &raquo;</a></p>'));
+
+		$f->addFieldToTab("Root.SocialMediaSettings", new UploadField('OgImage', 'Social Share Image'));
+		$f->addFieldToTab('Root.SocialMediaSettings', new TextField('OgTitle', 'Social Share Title'));
+		$f->addFieldToTab('Root.SocialMediaSettings', new TextareaField('OgDescription', 'Social Share Description'));
+
 		$f->addFieldToTab("Root.Sidebar", $gridField); // add the grid field to a tab in the CMS
 
 	}
