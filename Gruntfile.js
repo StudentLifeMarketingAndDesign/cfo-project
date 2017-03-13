@@ -16,6 +16,7 @@ module.exports = function(grunt) {
           'bower_components/responsive-nav/responsive-nav.js',
           'bower_components/slick-carousel/slick/slick.js',
           'bower_components/jquery-unveil/jquery.unveil.js',
+          'bower_components/fitvids/jquery.fitvids.js',
           '../division-bar/js/division-bar.js',
           'javascript/*.js',
           'javascript/**/*.js'
