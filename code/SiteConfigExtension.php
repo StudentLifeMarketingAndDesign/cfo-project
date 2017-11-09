@@ -11,9 +11,7 @@ class SiteConfigExtension extends DataExtension {
 	'EmailAddress' => 'Text',
 	'VimeoLink' => 'Text',
 	'YouTubeLink' => 'Text',
-	'InstagramLink' => 'Text',
-	'DisableUITracking' => 'Boolean'
-
+	'InstagramLink' => 'Text'
 	);
 
   private static $has_one = array(
@@ -23,7 +21,7 @@ class SiteConfigExtension extends DataExtension {
   public function updateCMSFields(FieldList $fields){
 
 	  $fields->addFieldToTab('Root.Main', new HTMLEditorField('GroupSummary', 'Group Summary'));
-	  $fields->addFieldToTab('Root.Main', new CheckboxField('DisableUITracking', 'Disable UI Tracking Utility'));
+
 	  $fields->addFieldToTab('Root.Main', new TextareaField('Address', 'Organization Address'));
 	  $fields->addFieldToTab('Root.Main', new TextareaField('PhoneNumber', 'Phone Number(s)'));
 	  $fields->addFieldToTab('Root.Main', new TextareaField('EmailAddress', 'Email Address'));
@@ -38,18 +36,7 @@ class SiteConfigExtension extends DataExtension {
 
 	  return $fields;
   }
-	public function UITrackingID(){
-		$config = SiteConfig::current_site_config(); 
 
-		$prefix = 'uiowa.edu.md-';
-		$filter = URLSegmentFilter::create();
-		$siteName = $config->Title;
-
-		$filteredSiteName = $filter->filter($siteName);
-
-		return $prefix.$filteredSiteName;
-
-	}
 }
 class SiteConfigExtensionPage_Controller extends Page_Controller {
 
