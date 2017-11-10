@@ -25,7 +25,8 @@
                 "md/ac-json-events": "dev-master",
                 "md/division-analytics": "*",
                 "jonom/focuspoint" : "*",
-      		    "silverstripe/secureassets" : "*"
+      		    "silverstripe/secureassets" : "*",
+                "silverstripe/activedirectory": "^3.1"
         },
         "extra": {
                 "branch-alias": {
@@ -40,7 +41,11 @@
         {
             "type": "vcs",
             "url": "https://github.com/StudentLifeMarketingAndDesign/ac-json-events"       
-        }
+        },
+          {
+             "type": "vcs",
+             "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-activedirectory"
+          }
     ]
 
 }
