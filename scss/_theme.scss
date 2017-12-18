@@ -203,6 +203,12 @@ h1, h2 {
 		display: block;
 	}
 }
+.uiowa-bar__link{
+	font-size: 12px;
+	&:hover{
+		color: #D4E3F9;
+	}
+}
 
 // Side Navigation ===================================================
 .side-nav {
