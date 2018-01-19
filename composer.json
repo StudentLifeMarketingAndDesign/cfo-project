@@ -26,11 +26,8 @@
                 "md/division-analytics": "*",
                 "jonom/focuspoint" : "*",
       		    "silverstripe/secureassets" : "*",
-<<<<<<< HEAD
-                "md/uiowa-bar" : "*"
-=======
+                "md/uiowa-bar" : "*",
                 "silverstripe/activedirectory": "^3.1"
->>>>>>> 5f39c6060caaad3c15b58ac8f833cf2351fb6f11
         },
         "extra": {
                 "branch-alias": {
