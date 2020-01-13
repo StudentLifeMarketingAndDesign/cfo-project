@@ -1,0 +1,40 @@
+BetterButtonsUtils:
+  edit:
+    UncleCheese\BetterButtons\Actions\BetterButtonPrevNextAction: true
+    UncleCheese\BetterButtons\Buttons\BetterButton_New: true
+  versioned_edit:
+    UncleCheese\BetterButtons\Actions\BetterButtonPrevNextAction: true
+    UncleCheese\BetterButtons\Buttons\BetterButton_New: true
+BetterButtonsActions:
+  create:
+    UncleCheese\BetterButtons\Buttons\BetterButton_Save: true
+    UncleCheese\BetterButtons\Buttons\BetterButton_SaveAndClose: true
+  edit:
+    UncleCheese\BetterButtons\Buttons\BetterButton_Save: true
+    UncleCheese\BetterButtons\Buttons\BetterButton_SaveAndClose: true
+    UncleCheese\BetterButtons\Buttons\BetterButton_Delete: true
+    UncleCheese\BetterButtons\Actions\BetterButtonFrontendLinksAction: true
+  versioned_create:
+    UncleCheese\BetterButtons\Buttons\BetterButton_SaveDraft: true
+    UncleCheese\BetterButtons\Buttons\BetterButton_Publish: true
+  versioned_edit:
+    UncleCheese\BetterButtons\Buttons\BetterButton_SaveDraft: true
+    UncleCheese\BetterButtons\Buttons\BetterButton_Publish: true
+    Group_Versioning: false
+    UncleCheese\BetterButtons\Buttons\BetterButton_Rollback: true
+    UncleCheese\BetterButtons\Buttons\BetterButton_Unpublish: true
+    UncleCheese\BetterButtons\Buttons\BetterButton_Delete: true
+    UncleCheese\BetterButtons\Actions\BetterButtonFrontendLinksAction: true
+BetterButtonsGroups:
+  SaveAnd:
+    label: 'Save and...'
+    buttons:
+      UncleCheese\BetterButtons\Buttons\BetterButton_SaveAndAdd: true
+      UncleCheese\BetterButtons\Buttons\BetterButton_SaveAndClose: true
+      UncleCheese\BetterButtons\Buttons\BetterButton_SaveAndNext: true
+      UncleCheese\BetterButtons\Buttons\BetterButton_SaveAndPrev: true
+  Versioning:
+    label: Versioning...
+    buttons:
+      UncleCheese\BetterButtons\Buttons\BetterButton_Rollback: true
+      UncleCheese\BetterButtons\Buttons\BetterButton_Unpublish: true
