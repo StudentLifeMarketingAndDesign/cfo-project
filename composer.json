@@ -27,7 +27,7 @@
                 "jonom/focuspoint" : "*",
       		    "silverstripe/secureassets" : "*",
                 "md/uiowa-bar" : "dev-ss3.x",
-                "silverstripe/activedirectory": "3.*"
+                "md/activedirectory": "3.2"
         },
         "extra": {
                 "branch-alias": {
