@@ -1,5 +1,12 @@
 <?php
 
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\Forms\TextareaField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\ORM\DataExtension;
+
+
 class SiteConfigExtension extends DataExtension {
 
  private static $db = array(
@@ -36,13 +43,5 @@ class SiteConfigExtension extends DataExtension {
 
 	  return $fields;
   }
-
-}
-class SiteConfigExtensionPage_Controller extends Page_Controller {
-
-
-   public function init() {
-      parent::init();
-   }
 
 }

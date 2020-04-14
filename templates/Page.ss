@@ -9,8 +9,7 @@
 	<% include OpenGraph %>
 	<% include Favicon %>
 
-	<link rel="stylesheet" href="$ThemeDir/css/app.css" />
-	<script src="cfo-project/bower_components/modernizr/modernizr.js"></script>
+	<link rel="stylesheet" href="$resourceURL("themes/cfo-subtheme/dist/styles/main.css")" />
 	<% include Typekit %>
 </head>
 
@@ -38,7 +37,7 @@
     
     $Analytics
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="{$ThemeDir}/build/build.js"></script>
+	<script src="{$ThemeDir}/dist/scripts/main.min.js"></script>
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
 	  if (d.getElementById(id)) return;

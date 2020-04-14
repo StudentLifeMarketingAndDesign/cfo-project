@@ -1,4 +1,9 @@
 <?php
+
+use SilverStripe\Assets\Image;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\ORM\DataObject;
 class Sponsor extends DataObject {
 
 	private static $db = array(
@@ -8,7 +13,7 @@ class Sponsor extends DataObject {
 	);
 
 	private static $has_one = array(
-		"SponsorPhoto" => "Image",
+		"SponsorPhoto" => Image::class,
 	);
 	
 	private static $summary_fields = array(

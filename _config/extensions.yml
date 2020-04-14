@@ -11,50 +11,8 @@ SiteTree:
     - SilverStripe\ORM\Search\FulltextSearchable
 Page:
   extensions:
-    - DNADesign\Elemental\Extensions\ElementalPageExtension
-    - ExtendedElementalAreas
-    - DivisionPage
+    - CfoPage
     - SilverStripe\Widgets\Extensions\WidgetPageExtension
-    - OpenGraphExtension
-PageController:
-  extensions:
-    - DivisionPageController
-SilverStripe\Blog\Model\BlogPost:
-  extensions:
-    - BlogFieldExtension
-SilverStripe\Blog\Model\Blog:
-  extensions:
-    - BlogExtension
-SilverStripe\Blog\Model\BlogTag:
-  extensions:
-    - BlogTagExtension
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
     - SiteConfigExtension
-ContentBlock:
-  extensions:
-    - ContentBlockExtension
-Block:
-  extensions:
-    - DivisionBlockExtension
-Calendar:
-  extensions:
-    - DivisionCalendarExtension
-SilverStripe\Blog\Model\BlogCategory:
-  extensions:
-    - BlogCategoryExtension
-SilverStripe\Assets\Image:
-  extensions:
-    - DivisionImageExtension
-SilverStripe\Admin\LeftAndMain:
-  extra_requirements_css:
-    - vendor/md/division-project/css/cms.css
-DNADesign\Elemental\Models\BaseElement:
-  extensions:
-    - BaseElementExtension
-DNADesign\Elemental\Models\ElementalArea:
-  extensions:
-    - ElementalAreaExtension
-SilverStripe\UserForms\Model\Recipient\EmailRecipient:
-  extensions:
-    - DivisionEmailRecipientExtension

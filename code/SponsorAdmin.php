@@ -1,4 +1,7 @@
 <?php
+
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Admin\ModelAdmin;
 class SponsorAdmin extends ModelAdmin {
 
 	private static $managed_models = array('Sponsor'); 

@@ -1,5 +1,13 @@
 <?php
 
+use SilverStripe\Assets\Image;
+use SilverStripe\Assets\File;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\DropdownField;
+use SilverStripe\ORM\FieldType\DBDate;
+use SilverStripe\ORM\DataExtension;
+
 class BlogFieldExtension extends DataExtension {
 
     private static $db = array(
@@ -7,8 +15,8 @@ class BlogFieldExtension extends DataExtension {
     );
 
     private static $has_one = array(
-        'Image' => 'Image',
-        'AudioClip' => 'File'
+        'Image' => Image::class,
+        'AudioClip' => File::class
     );
 
     public function getCMSFields() {
@@ -40,7 +48,7 @@ class BlogFieldExtension extends DataExtension {
       if($this->owner->ClassName == "BlogEntry"){
         //$fields->removeByName("Date");
       }else {
-        $fields->renameField("Date", "Published Date");
+        $fields->renameField(DBDate::class, "Published Date");
       }
 
   }

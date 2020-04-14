@@ -5,7 +5,7 @@
 		</a>
 	<% else %>
 		<a href="$Link" class="staff-link">
-			<img src="{$ThemeDir}/images/placeholder.gif" alt="Placeholder photograph for $FirstName $LastName" class="staff-img">
+			<img src="{$ThemeDir}/dist/images/placeholder.gif" alt="Placeholder photograph for $FirstName $LastName" class="staff-img">
 		</a>
 	<% end_if %>
 	<p class="staff-name">

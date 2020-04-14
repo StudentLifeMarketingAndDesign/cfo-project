@@ -1,4 +1,11 @@
 <?php
+
+use SilverStripe\ORM\FieldType\DBBoolean;
+use SilverStripe\Widgets\Model\WidgetArea;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Widgets\Forms\WidgetAreaEditor;
+use SilverStripe\ORM\DataExtension;
 /**
  * Adds a single {@link WidgetArea} called "SideBar" to {@link Page} classes.
  * Adjust your templates to render the resulting
@@ -11,7 +18,7 @@
 class WidgetExtension extends DataExtension {
 
 	static $db = array(
-		'InheritWidgetSideBar' => 'Boolean',
+		'InheritWidgetSideBar' => DBBoolean::class,
 	);
 
 	static $defaults = array(
@@ -19,7 +26,7 @@ class WidgetExtension extends DataExtension {
 	);
 
 	static $has_one = array(
-		'SideBar' => 'WidgetArea'
+		'SideBar' => WidgetArea::class
 	);
 
 	public function updateCMSFields(FieldList $fields) {

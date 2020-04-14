@@ -1,4 +1,7 @@
 <?php 
+use SilverStripe\Assets\Image;
+use SilverStripe\ORM\DataObject;
+
 
 class HomePageBackgroundFeature extends DataObject {
 	
@@ -8,7 +11,7 @@ class HomePageBackgroundFeature extends DataObject {
 		);
 	
 	private static $has_one = array (
-		'Image' => 'Image',
+		'Image' => Image::class,
 		'HomePage' => 'HomePage'
 		);
 
@@ -19,7 +22,7 @@ class HomePageBackgroundFeature extends DataObject {
 		"Thumbnail"
 	);
 
-	function getThumbnail() {
+	public function getThumbnail() {
 		return $this->Image()->CMSThumbnail();
 	}	
 

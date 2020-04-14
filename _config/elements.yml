@@ -1,4 +1,0 @@
-Page:
-  disallowed_elements:
-    - 'TextBlock'
-    - 'ContentBlock'

@@ -1,5 +1,11 @@
 <?php
 
+use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\TreeDropdownField;
+use SilverStripe\ORM\DataObject;
+
 	class HomePageQuicklink extends DataObject {
 
 		private static $db = array(
@@ -13,7 +19,7 @@
 		);
 
 		private static $has_one = array (
-			"AssociatedPage" => "SiteTree",
+			"AssociatedPage" => SiteTree::class,
 			// "Image" => "Image"
 		);
 
@@ -26,7 +32,7 @@
 			$fields->push( new TextField( 'SubTitle', 'Link Subtitle' ));
 
 			// $fields->push( new UploadField("Image", "Image"));
-			$fields->push( new TreeDropdownField("AssociatedPageID", "Link to this page", "SiteTree"));
+			$fields->push( new TreeDropdownField("AssociatedPageID", "Link to this page", SiteTree::class));
 			$fields->push( new TextField( 'ExternalLink', 'Use the external link instead:' ));
 			// $fields->push( new HTMLEditorField( 'Content', 'Content' ));
 

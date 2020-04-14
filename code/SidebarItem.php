@@ -1,4 +1,17 @@
 <?php 
+use SilverStripe\Assets\Image;
+use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\TreeDropdownField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
+use SilverStripe\Forms\GridField\GridFieldAddNewButton;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\ORM\DataObject;
+
 
 	class SidebarItem extends DataObject {
 		
@@ -12,8 +25,8 @@
 		);
 		
 		private static $has_one = array (
-			"Image" => "Image",
-			"AssociatedPage" => "SiteTree",
+			"Image" => Image::class,
+			"AssociatedPage" => SiteTree::class,
 		);
 		
 		
@@ -32,10 +45,10 @@
 		);
 		
 		
-		function getCMSFields() { 
+		public function getCMSFields() { 
 			$fields = new FieldList(); 
 				
-			$treeDropdown = new TreeDropdownField("AssociatedPageID", "Link to this page", "SiteTree");
+			$treeDropdown = new TreeDropdownField("AssociatedPageID", "Link to this page", SiteTree::class);
 			//$treeDropdown->setEmptyString('(None)');
 
 			$fields->push( new TextField( 'Title', 'Title' ));
@@ -44,12 +57,12 @@
 			$fields->push($treeDropdown);
 			$fields->push( new CheckboxField( 'UseExternalLink', 'Or use the external link below' ));
 			$fields->push( new TextField( 'ExternalLink', 'External Link' ));
-			$fields->push( new UploadField( 'Image', 'Image' ));
+			$fields->push( new UploadField( 'Image' ));
 						
 			$fields->push( new HTMLEditorField( 'Content', 'Content' ));
 			
 			$gridFieldConfig = GridFieldConfig_RelationEditor::create();
-			$gridFieldConfig->removeComponentsByType('GridFieldAddNewButton');
+			$gridFieldConfig->removeComponentsByType(GridFieldAddNewButton::class);
 
 			$gridField = new GridField("SidebarItems", "Pages that use this sidebar", $this->Pages(), $gridFieldConfig);
 			
