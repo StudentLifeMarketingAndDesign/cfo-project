@@ -5,7 +5,7 @@ use SilverStripe\Security\Permission;
 use SilverStripe\Forms\GridField\GridFieldAddNewButton;
 use SilverStripe\Forms\GridField\GridFieldDeleteAction;
 use SilverStripe\Forms\GridField\GridField;
-
+use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 class HomePage extends Page {
 
 	private static $db = array(
@@ -22,13 +22,14 @@ class HomePage extends Page {
 
 	public function getCMSFields(){
 		$f = parent::getCMSFields();
-
+		$contentField = $f->dataFieldByName('Content');
+		$contentField->setRows(2);
 		// $f->removeByName("Content");
 		$f->removeByName("BackgroundImage");
 		$f->removeByName("InheritSidebarItems");
 		$f->removeByName("SidebarLabel");
 		$f->removeByName("SidebarItem");
-
+		$f->removeByName("Metadata");
 		$gridFieldConfig = GridFieldConfig_RecordEditor::create();
 		$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
 

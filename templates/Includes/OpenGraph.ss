@@ -43,7 +43,7 @@
 		<meta property="og:image:width" content="$SiteConfig.PosterImage.Width" />
 		<meta property="og:image:height" content="$SiteConfig.PosterImage.Height" />  	
 	<% else %>
-		<meta property="og:image" content="{$BaseHref}division-project/images/og-dsl.png" />
+		<meta property="og:image" content="$resourceURL("vendor/md/cfo-project/src/images/og-dsl.png")" />
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
 	<% end_if %>

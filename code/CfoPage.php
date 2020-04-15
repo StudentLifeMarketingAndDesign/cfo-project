@@ -10,6 +10,7 @@ use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\ORM\DataExtension;
+use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 class CfoPage extends DataExtension {
 
 	private static $db = array(
@@ -43,24 +44,25 @@ class CfoPage extends DataExtension {
 
 public function updateCMSFields(FieldList $f) {
 
-		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
+		// $gridFieldConfig = GridFieldConfig_RelationEditor::create();
 
-		$row = "SortOrder";
-		$gridFieldConfig->addComponent($sort = new GridFieldSortableRows(stripslashes($row)));
+		// $row = "SortOrder";
+		// $gridFieldConfig->addComponent($sort = new GridFieldSortableRows(stripslashes($row)));
 
-		$sort->table = 'Page_SidebarItems';
-		$sort->parentField = 'PageID';
-		$sort->componentField = 'SidebarItemID';
+		// $sort->table = 'Page_SidebarItems';
+		// $sort->parentField = 'PageID';
+		// $sort->componentField = 'SidebarItemID';
 
-		$gridField = new GridField("SidebarItems", "Sidebar Items", $this->SidebarItems(), $gridFieldConfig);
-		$f->addFieldToTab("Root.Sidebar", new LabelField("SidebarLabel", "<h2>Add sidebar items below</h2>"));
-		$f->addFieldToTab("Root.Sidebar", new LiteralField("SidebarManageLabel", '<p><a href="admin/sidebar-items" target="_blank">View and Manage Sidebar Items &raquo;</a></p>'));
+		// $gridField = new GridField("SidebarItems", "Sidebar Items", $this->SidebarItems(), $gridFieldConfig);
+		// $f->addFieldToTab("Root.Sidebar", new LabelField("SidebarLabel", "<h2>Add sidebar items below</h2>"));
+		// $f->addFieldToTab("Root.Sidebar", new LiteralField("SidebarManageLabel", '<p><a href="admin/sidebar-items" target="_blank">View and Manage Sidebar Items &raquo;</a></p>'));
 
 		$f->addFieldToTab("Root.SocialMediaSettings", new UploadField('OgImage', 'Social Share Image'));
 		$f->addFieldToTab('Root.SocialMediaSettings', new TextField('OgTitle', 'Social Share Title'));
 		$f->addFieldToTab('Root.SocialMediaSettings', new TextareaField('OgDescription', 'Social Share Description'));
 
-		$f->addFieldToTab("Root.Sidebar", $gridField); // add the grid field to a tab in the CMS
+		//disabling sidebar until we can do something different with the cfo-theme.
+		// $f->addFieldToTab("Root.Sidebar", $gridField); // add the grid field to a tab in the CMS
 
 	}
 

@@ -2,6 +2,7 @@
 
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Admin\ModelAdmin;
+use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 class SponsorAdmin extends ModelAdmin {
 
 	private static $managed_models = array('Sponsor'); 

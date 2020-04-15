@@ -27,7 +27,7 @@ use SilverStripe\ORM\DataObject;
 
 		private static $default_sort = "SortOrder";
 
-		function getCMSFields() {
+		public function getCMSFields() {
 			$fields = new FieldList();
 
 			$fields->push( new TextField( 'Title', 'Title' ));

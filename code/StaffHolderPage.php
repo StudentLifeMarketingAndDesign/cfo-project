@@ -4,7 +4,7 @@ use SilverStripe\CMS\Model\VirtualPage;
 use SilverStripe\Forms\CheckboxSetField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 use SilverStripe\Forms\GridField\GridField;
-
+use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 class StaffHolderPage extends Page {
 
 	private static $db = array(
