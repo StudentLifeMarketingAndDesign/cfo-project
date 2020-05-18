@@ -8,3 +8,11 @@
 		clear: left;
 	}
 }
+
+.action{
+	@extend .button;
+}
+
+fieldset{
+	border: none !important;
+}
