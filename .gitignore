@@ -1,3 +1,4 @@
 *.scssc
 node_modules
 nocaptcha.yml
+.DS_Store
