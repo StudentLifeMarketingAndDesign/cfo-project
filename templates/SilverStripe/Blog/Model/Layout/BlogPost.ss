@@ -9,13 +9,13 @@
 		<% end_if %>
 		--%>
 		<div class="content">$Content</div>
-		<h2>Audio:</h2>
 		<% if $AudioClip %>
+		<h2>Audio:</h2>
 			<audio src="$AudioClip.Filename" controls="controls" preload="none"></audio>
 		<% end_if %>
 	</article>
 </div>
 <div class="large-3 columns content-right">
 	<br>
-	<% include BlogSideBar %>
+<%-- 	<% include BlogSideBar %> --%>
 </div>

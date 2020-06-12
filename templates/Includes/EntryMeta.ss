@@ -6,15 +6,8 @@
 		<% end_loop %>
 	<% end_if %>
 
-	<% if $Comments.exists %>
-		<a href="{$Link}#comments-holder">
-			<%t Blog.Comments "Comments" %>
-			$Comments.count
-		</a>;
-	<% end_if %>
-
 	<%t Blog.Posted "Posted" %>
-	$PublishDate.ago
+	$PublishDate.Format("MMMM d, y")
 
 	<% if $Credits %>
 		<%t Blog.By "by" %>

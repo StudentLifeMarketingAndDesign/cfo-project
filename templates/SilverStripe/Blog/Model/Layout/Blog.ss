@@ -45,6 +45,6 @@
 
 <div class="large-3 columns content-right">
     <br>
-    <% include BlogSideBar %>
+<%--     <% include BlogSideBar %> --%>
 </div>
 
