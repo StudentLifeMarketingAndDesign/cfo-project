@@ -40,8 +40,9 @@
 	$BetterNavigator
     
     $Analytics
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="{$ThemeDir}/dist/scripts/main.min.js"></script>
+	<script src=""></script>
+	<% require javascript("https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js") %>
+	<% require javascript("themes/cfo-subtheme/dist/scripts/main.min.js") %>
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
 	  if (d.getElementById(id)) return;
